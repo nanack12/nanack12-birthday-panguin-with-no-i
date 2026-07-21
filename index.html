@@ -51,7 +51,7 @@
     const CONFIG = {
       name: "팡근🐧",
       age: 30,
-      from: "지똔이",
+      from: "지똔",
       giftName: "새 장비 (실물은 잠시 후 공개)",
       coupleSince: "우리의 첫 commit부터",
       concertName: "생일 전야 콘서트 DLC",
@@ -60,24 +60,38 @@
       menuHint: "원하는 메뉴를 선택하세요 ❁´◡`❁",
       futureTodo: ["나랑 합주 더 많이 하기", "좋은 공연 더 많이 보기", "v31.0도 같이 업데이트하기"],
       cake: String.raw`
-                      .     .     .     .     .
-                     .*.   .*.   .*.   .*.   .*
-                     | |   | |   | |   | |   | |
-                   __|_|___|_|___|_|___|_|___|_|__
-                .-'                               '-.
-              .'       H A P P Y   L E V E L  3 0     '.
-             /___________________________________________\\
-            /  *     *     *     *     *     *     *    \\
-           /_______________________________________________\\
-           |                                               |
-           |    [ DEV ]   [ GUITAR ]   [ CONCERT DLC ]    |
-           |                                               |
-           |       + + +   B I R T H D A Y   + + +        |
-           |_______________________________________________|
-            \\_____________________________________________/
-              '-----------------------------------------'
-                   \\     \\     |     /     /
-                    '-----'-----'-----'-----'`
+   )         *             !  !  !  !  !  !     (                   )
+  (          (    *       |V||V||V||V||V||V|     )       )         (
+   )   *      )           | || || || || || |    (       (   *       )
+  (          (           (*******************)  *       *    )      *
+   )          )  *       (        T O        )              (
+  (     (    (       !   (    *         *    )   !           )    (
+   )   * )    )     |V|  (   \|/       \|/   )  |V|    *    (      )
+  (     (     *     | |  (<<<<<<<<<*>>>>>>>>>)  | |          )    (
+   )     )        ((*******************************))       (  *   )
+  (     (   *     ((           N A M E             ))        )    (
+   ) *   )     !  ((   *    *   *    *    *    *   ))  !    (      )
+  (     (     |V| ((  \|/  \|/ \|/  \|/  \|/  \|/  )) |V|    )    (
+  *)     )    | | ((^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^)) | |   (      )
+  (     (  (***********************************************) )  * (
+   )     ) (*      |   |   __    ___    ___               *)(      )
+  (     (  (*      |   |  /  \  |   \  |   \    \  /      *) )    (
+  *      ) (*      |---| |----| |___/  |___/     \/       *)(      )
+        (  (*  *   |   | |    | |      |         /   *    *) )    (
+         ) (* \|/  |   | |    | |      |        /   \|/   *) *     )
+        (  (*                                             *)      (
+   )  *  ) (*}+{}+{}+{}+{}+{}+{}+{}+{}+{}+{}+{}+{}+{}+{}+{*)       )
+  (     (  (*}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{*)       *
+   ) ((********************************************************))
+  (  ((}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*)) 
+   ) ((      __                                                ))
+  (  ((     |  \ _____  ___  _____        ___     __           ))
+   ) ((     |__/   |   |   \   |   |   | |   \   /  \   \  /   ))
+  (  ((     |  \   |   |___/   |   |---| |    > |----|   \/    ))
+  *  ((  *  |__/ __|__ |  \    |   |   | |___/  |    |   /  *  ))
+     (( \|/                                                \|/ ))
+     ((}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*{}*))
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`
     };
     // ================================================
 
@@ -89,9 +103,9 @@
     const screens = {
       menu: () => `<h1>BirthdayOS<br>v${CONFIG.age}.0</h1><p>환영합니다, ${CONFIG.name} USER.</p><p class="muted">${escapeHtml(CONFIG.menuHint)}</p><div class="grid">${menuButton('about','ABOUT','사용자 프로필')}${menuButton('status','STATUS','시스템 능력치')}${menuButton('changelog','CHANGELOG','v30.0 변경 사항')}${menuButton('bugs','BUG REPORT','알려진 문제')}${menuButton('gift','GIFT','암호화된 신규 장비','primary')}${menuButton('final','FINAL BUILD','생일 축하 화면','primary')}</div>`,
       about: () => `<h2>ABOUT.USER</h2><div class="card">NAME&nbsp;&nbsp;&nbsp;: ${CONFIG.name}<br>AGE&nbsp;&nbsp;&nbsp;&nbsp;: ${CONFIG.age}<br>CLASS&nbsp;&nbsp;: Developer<br>LOADOUT: Electric Guitar<br>ROLE&nbsp;&nbsp;&nbsp;: ${CONFIG.bandRole}</div><p class="muted">현재 실행 중: ${CONFIG.concertName}</p>`,
-      status: () => `<h2>SYSTEM STATUS</h2><div class="stats"><span>DEV SKILL</span><span><i class="bar" style="--value:94%"></i> 94</span><span>GUITAR</span><span><i class="bar" style="--value:97%"></i> 97</span><span>STAMINA</span><span><i class="bar" style="--value:72%"></i> 72</span><span>KNEE HP</span><span><i class="bar" style="--value:30%"></i> 30</span><span>LUCK</span><span><i class="bar" style="--value:100%"></i> 999*</span></div><p class="muted">* ${CONFIG.from} 플러그인 보너스 적용됨. 이의 제기 불가.</p>`,
+      status: () => `<h2>SYSTEM STATUS</h2><div class="stats"><span>DEV SKILL</span><span><i class="bar" style="--value:94%"></i> 94</span><span>GUITAR</span><span><i class="bar" style="--value:97%"></i> 97</span><span>STAMINA</span><span><i class="bar" style="--value:72%"></i> 30</span><span>KNEE HP</span><span><i class="bar" style="--value:30%"></i> 30</span><span>LUCK</span><span><i class="bar" style="--value:100%"></i> 999*</span></div><p class="muted">* ${CONFIG.from} 플러그인 보너스 적용됨. 이의 제기 불가.</p>`,
       changelog: () => `<h2>CHANGELOG v${CONFIG.age}.0</h2><div class="card">+ 연륜 1 증가<br>+ 기타 톤 판단력 향상<br>+ ${CONFIG.concertName} 설치<br>+ 합주 호흡 패치 적용<br>- 밤샘 후 회복 속도<br>-- “장비는 이제 충분해” 발언 신뢰도</div><p>Release status: <b>STABLE ENOUGH</b></p>`,
-      bugs: () => `<h2>KNOWN ISSUES</h2><div class="card danger">BUG-001&nbsp; 기타를 잡으면 시간이 사라짐<br>BUG-002&nbsp; 좋은 톤을 찾으면 볼륨이 커짐<br>BUG-003&nbsp; 새 장비 검색 탭이 닫히지 않음<br>BUG-004&nbsp; 개발 얘기 시작 시 대화가 무한 루프</div><p>Status: <b>WILL NOT FIX</b></p>`,
+      bugs: () => `<h2>KNOWN ISSUES</h2><div class="card danger">BUG-001&nbsp; 기타를 잡으면 시간이 사라짐<br>BUG-002&nbsp; 좋은 톤을 찾으면 볼륨이 커짐<br>BUG-003&nbsp; 새 이팩터 검색 탭이 닫히지 않음<br>BUG-004&nbsp; 개발 얘기 시작 시 대화가 무한 루프</div><p>Status: <b>WILL NOT FIX</b></p>`,
       gift: () => `<h2>GIFT.DECRYPT</h2><p>암호화된 생일 장비를 해제하시겠습니까?</p><div class="card">TARGET: ${CONFIG.giftName}<br>OWNER: ${CONFIG.name}<br>LICENSE: 영구</div><div class="grid"><button data-action="unlockGift" class="primary">[ UNLOCK ]<small>선물 정보 해제</small></button><button data-screen="menu">[ MAYBE LATER ]</button></div>`,
       giftUnlocked: () => `<h2>NEW EQUIPMENT UNLOCKED</h2><div class="card"><b>${CONFIG.giftName}</b><br><br>획득 조건: Level ${CONFIG.age} 달성<br>장착 효과: 외출 준비 속도 +10<br>지급 방식: 잠시 후 현실 세계에서 전달</div><button data-screen="final" class="primary">[ CONTINUE TO FINAL BUILD ]</button>`,
       final: () => `<h2>BUILD COMPLETE</h2><p>${CONFIG.message}</p><pre aria-label="ASCII 아트 생일 케이크">${escapeHtml(CONFIG.cake)}</pre><div class="card">HAPPY BIRTHDAY, ${CONFIG.name.toUpperCase()}!<br>FROM: ${CONFIG.from}<br>SINCE: ${CONFIG.coupleSince}</div><p class="cursor">다음 버전도 함께 빌드 예정</p><button data-screen="future">[ VIEW NEXT SPRINT ]</button>`,
