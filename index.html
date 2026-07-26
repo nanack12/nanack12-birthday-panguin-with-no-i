@@ -73,10 +73,12 @@
   </script>
   <script>
     const CAKE_ART = document
-      .querySelector('#cakeArt')
-      .textContent
-      .replace(/^\r?\n/, '')
-      .replace(/\r?\n\s*$/, '');
+    .querySelector('#cakeArt')
+    .textContent
+    .replace(/^\r?\n/, '')
+    .replace(/\r?\n\s*$/, '')
+    .split('\\')
+    .join('╲');
     // ===== 여기만 수정하면 카드 내용이 바뀝니다 =====
     const CONFIG = {
       name: "팡근🐧",
